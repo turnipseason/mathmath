@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+{% block content %}
+   <div class="features">
+       <h1>
+           Ваша работа:</h1> <h3>{{ job.title }}</h3><br>
+       <h1>Требования и условия:</h1> <p>{{ job.task }}</p><br>
+       <a href="{% url 'delete' job.id%}" class="btn btn-danger">Удалить</a>
+       <a href="{% url 'update' job.id%}" class="btn btn-info">Редактировать</a>
+   </div>
+{% endblock %}

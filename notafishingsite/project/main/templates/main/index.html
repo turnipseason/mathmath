@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+    <h1>Доступные вакансии</h1>
+    {% if jobs %}
+
+        {% for el in jobs %}
+            <div class="alert alert-warning mt-2">
+
+                <h3>{{ el.title }}</h3>
+                <p>{{ el.task }}</p>
+                <a href="{% url 'details' el.id %}"class="btn btn-warning">Детали</a>
+
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Вакансий нет!</p>
+    {% endif %}
+{% endblock %}
