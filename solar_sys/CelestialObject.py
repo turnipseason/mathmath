@@ -31,7 +31,6 @@ class Sun:
         self.meshData = None
         self.glMeshItem = None
         self.objectRadius = 3
-        self.sun_orbit = Orbit(0, 0, w)
 
     def draw(self, w):
         self.meshData = gl.MeshData.sphere(rows=10, cols=20, radius=self.objectRadius)
