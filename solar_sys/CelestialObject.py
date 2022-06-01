@@ -33,7 +33,7 @@ class Sun:
         self.objectRadius = 3
 
     def draw(self, w):
-        self.meshData = gl.MeshData.sphere(rows=10, cols=20, radius=self.objectRadius)
+        self.meshData = gl.MeshData.sphere(rows=20, cols=50, radius=self.objectRadius)
         self.glMeshItem = gl.GLMeshItem(
             meshdata=self.meshData,
             color=(0.95, 0.85, 0.09, 1)
@@ -56,7 +56,7 @@ class Earth(SpaceObject):
         self.global_theta = 0
 
     def draw(self, w):
-        self.md = gl.MeshData.sphere(rows=10, cols=20, radius=self.radius)
+        self.md = gl.MeshData.sphere(rows=20, cols=50, radius=self.radius)
         self._pts = self.md.vertexes()
         self.m1 = gl.GLMeshItem(
             meshdata=self.md,
@@ -92,7 +92,7 @@ class Moon(SpaceObject):
         self.global_psi = 30
 
     def draw(self, w):
-        self.md = gl.MeshData.sphere(rows=10, cols=20, radius=self.radius)
+        self.md = gl.MeshData.sphere(rows=20, cols=50, radius=self.radius)
         self._pts = self.md.vertexes()
         self.m1 = gl.GLMeshItem(
             meshdata=self.md,
@@ -133,7 +133,7 @@ class Pluto(SpaceObject):
         self.global_theta = -20
 
     def draw(self, w):
-        self.md = gl.MeshData.sphere(rows=10, cols=20, radius=self.radius)
+        self.md = gl.MeshData.sphere(rows=20, cols=50, radius=self.radius)
         self._pts = self.md.vertexes()
         self.m1 = gl.GLMeshItem(
             meshdata=self.md,
